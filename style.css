@@ -23,27 +23,52 @@ body {
 }
 
 .form-group .login-form .input-group {
-    display: flex;
-    margin: 1rem 0;
+    margin: 1.5rem 0;
     position: relative;
-    background-color: tomato;
 }
 
-.form-group .login-form .input-group > input {
+.form-group .login-form .input-group input {
     display: block;
-    margin: 8px auto;
     outline: none;
     border: none;
     border-bottom: 1px solid rgb(87, 181, 209);
-    padding: 6px 4px;
+    padding: 6px 0px;
     width: 100%;
 }
 
 .form-group .login-form .input-group label {
     position: absolute;
     left: 0px;
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 400;
+    width: 100%;
+    top: 5px;
+    color: rgb(168, 164, 164);
+    pointer-events: none;
+    transition: 200ms;
 }
 
+.form-group .login-form .input-group input:focus + label {
+    top: -12px;
+}
 
+.form-group .login-form .input-group input:valid + label {
+    opacity: 0;
+}
+
+.form-group .login-form button {
+    background-image: linear-gradient(to top, #9890e3 0%, #b1f4cf 100%);
+    border: none;
+    width: 100%;
+    font-size: 14px;
+    border-radius: 10px;
+    padding: 4px 0;
+    cursor: pointer;
+    color: azure;
+}
+
+.form-group .login-form p, a {
+    color: inherit;
+    text-shadow: none;
+    margin-top: 1.5rem; 
+}
